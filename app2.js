@@ -63,7 +63,7 @@ const loadUniverse = () => {
     }
 
     const showDetails = universe =>{
-      console.log(universe)
+      // console.log(universe)
       //modal card one details
       document.getElementById("universe-description").innerText = universe.description;
 
@@ -71,7 +71,7 @@ const loadUniverse = () => {
       priceContainer.innerHTML = ''
       const prices = universe.pricing;
         prices.map(price=> {
-          console.log(price)
+          // console.log(price)
           priceContainer.innerHTML +=`
                <div  style="width:120px; height: 100px;" class="border d-grid justify-content-center align-items-center rounded-3 bg-white">${price.price}  ${price.plan} </div>
           `
@@ -96,13 +96,15 @@ const loadUniverse = () => {
       <li>${universe.integrations[2] ? universe.integrations[2] : "no data found"}</li>
       </ul>
         `
-
+        console.log(universe)
       //modal card 2 details
       const modalCard2 = document.getElementById("modal-card-2");
-      modalCard2.innerHTML = `
+      modalCard2.innerHTML =  `
+      <span style="width:40px; top:20px; right:20px; margin-left:20px;" class="badge rounded-pill text-bg-danger position-absolute">${universe.accuracy.score!=null? universe.accuracy.score : ""}</span>
       <img class="mx-2 my-2" src="${universe.image_link[0]}" >
-      <h5 class="mx-2">${universe.input_output_examples[0].input}</h5>
-      <p class="mx-2">${universe.input_output_examples[0].output}</p>
+      <h5 class="mx-2">${universe.input_output_examples[1].input}</h5>
+      <p class="mx-2">${universe.input_output_examples[1] != null ? universe.input_output_examples[1].output : "No! Not Yet! Take a break!!!"  }</p>
+      
       `
     }
     loadUniverse()
