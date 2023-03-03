@@ -1,5 +1,5 @@
 const loadUniverse = () => {
-    fetch(" https://openapi.programming-hero.com/api/ai/tools")
+    fetch("https://openapi.programming-hero.com/api/ai/tools")
         .then(res => res.json())
         .then(data=>{
             // console.log(data)
@@ -79,6 +79,7 @@ const loadUniverse = () => {
         //show features in card one
         const getModalFeaturesContainer = document.getElementById("card-feature");
         getModalFeaturesContainer.innerHTML = `
+        <h3>Features</h3>
         <ul>
         <li>${universe.features[1].feature_name}</li>
        <li>${universe.features[2].feature_name}</li>
@@ -88,16 +89,13 @@ const loadUniverse = () => {
         //show integrations in card one
         const integrationsContainer = document.getElementById("card-integrations");
         integrationsContainer.innerHTML = `
-        <h1>integrations</h1>
+        <h3>integrations</h3>
         <ul>
-        <li>${universe.integrations[0]}</li>
-       <li>${universe.integrations[1]}</li>
-      <li>${universe.integrations[2]}</li>
+        <li>${universe.integrations[0]? universe.integrations[0] : "no data found" }</li>
+       <li>${universe.integrations[1] ? universe.integrations[1] : "no data found"}  </li>
+      <li>${universe.integrations[2] ? universe.integrations[2] : "no data found"}</li>
       </ul>
         `
-
-
-    
 
       //modal card 2 details
       const modalCard2 = document.getElementById("modal-card-2");
