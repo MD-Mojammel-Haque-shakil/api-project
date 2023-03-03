@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 </head>
-<body class="container">
+<body class="container mt-5">
     
     <main>
         <section>
@@ -35,7 +35,7 @@
         <!-- modal section -->
        <section>
         <!-- Modal -->
-<div class="modal fade" id="universeDetailModal" tabindex="-1" aria-labelledby="universeDetailModalLabel" aria-hidden="true">
+<div class="modal fade modal-xl" id="universeDetailModal" tabindex="-1" aria-labelledby="universeDetailModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -44,7 +44,44 @@
         </div>
   
         <div id="universe-details" class="modal-body">
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- modal card-1 -->
+            <div class="col">
+              <div class="card">
+                
+                <div class="card-body">
+                  <h5 id="universe-description" class="card-title"></h5>
+                  <!-- card one pricing part -->
+                  <div class="d-flex justify-content-around">
+                    <div class=" d-flex justify-content-between gap-3 align-items-center text-center" id="pricing" >
+                    </div>
+                  </div>
+                  <!-- card one pricing part -->
+                  <div class="d-flex justify-content-around mt-4">
+                    <div id="card-feature">
+
+                    </div>
+                    <div id="card-integrations">
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- modal card2  -->
+            <div class="col">
+              <div id="modal-card-2" class="card">
+                
+                <!-- <div class="card-body">
+                
+                 
+                </div> -->
+              </div>
+            </div>
+           
           
+          </div>
         </div>
   
         <div class="modal-footer">
@@ -60,6 +97,6 @@
 
     <!-- js link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <!-- <script src="app2.js"></script> -->
+    <script src="app2.js"></script>
 </body>
 </html>

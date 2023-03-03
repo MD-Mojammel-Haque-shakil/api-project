@@ -16,7 +16,7 @@ const showUniverse = (universes) => {
       
     //get single universe with forEach
         universes.forEach(universe => {
-        console.log(universe.published_in)
+        console.log(universe)
         //create a div and set innerHTML
         const universeDiv = document.createElement("div");
         universeDiv.classList.add("col");
